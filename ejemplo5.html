@@ -20,9 +20,9 @@
         productos.forEach( x => {
             var salida = `<li> 
                              <b>identificador.</b> ${x.id} <br>
-                             <img src="${x.imagenUrl}" height="150" /><br>
                              <b>nombre.</b> ${x.nombre} <br>
                              <b>precio.</b> ${x.precio} <br>
+                             <img src="${x.imagenUrl}" height="150" />
                          </li>`;
                          document.getElementById('lista').innerHTML += salida;
         });
