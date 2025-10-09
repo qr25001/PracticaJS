@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <ul id="lista"></ul>
+    <script>
+        var obj = {id:1, nombre:"Coca-Cola", precio: 1.25, imagenUrl:"https://laconstancia.com/wp-content/uploads/2021/12/12.-PET-Original-3L.png"};
+        var productos = [
+            {id:2, nombre:"Margarita Mirasol", precio: 1.75, imagenUrl:"https://img.superselectos.com/36889706d5ca27658225bde733129fcd95acafb4_Smallbw.jpg"},
+            {id:3, nombre:"Queso San Julian", precio: 2.75, imagenUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcBdI5h_wZT7l5Sy689OCPU5skazAAEeUAlg&s"},
+            {id:4, nombre:"Papel Aluminio", precio: 0.75, imagenUrl:"https://walmartsv.vtexassets.com/arquivos/ids/663832/46319_02.jpg?v=638730743039030000"}
+        ];
+         productos.push(obj);
+
+        productos.forEach( x => {
+            var salida = `<li> 
+                             <b>identificador.</b> ${x.id} <br>
+                             <img src="${x.imagenUrl}" height="150" /><br>
+                             <b>nombre.</b> ${x.nombre} <br>
+                             <b>precio.</b> ${x.precio} <br>
+                         </li>`;
+                         document.getElementById('lista').innerHTML += salida;
+        });
+
+    </script>
+</body>
+</html>
